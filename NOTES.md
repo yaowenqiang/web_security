@@ -15,3 +15,29 @@
 
 > https://beefproject.com
 > https://github.com/byt3bl33d3r/MITMf
+
+## XSS Defenses: Content Security Policy(CSP)
+
+> Content-Security-Policy: script-src 'self' https://www.xxx.com font-src: https://fonts.googleapis.com
+
+### Selection of Useful CSP Directives
+
++ child-src: child execution contexts(frames, workers)
++ connect-src: what you can connect to (fetch, Websocket, EventSource)
++ form-action: where you can <form> submit to
++ img-src, media-src, object-src: where you can get images, media, flash from
++ style-src: where extenal stylesheets can come from
++ upgrade-insecure-requests: upgrades HTTP to HTTPS
++ default-src: fallback, for when specific directive isn't provided
+
+### keywords can use along side sources
+
++ 'none' : no sources allowed
++ 'self' : current origin
++ 'unsafe-inline' : allows inline javascripts & css
++ 'unsafe-eval': allows eval()
+
+> Cryptographic nonces
++ script-src "sha256-"
+
+

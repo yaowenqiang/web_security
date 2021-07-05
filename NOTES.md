@@ -40,4 +40,24 @@
 > Cryptographic nonces
 + script-src "sha256-"
 
+## XSS Attachments
+
+> PDF  with trojan
+> image with html contents
+
+# CSRF Cross-Site Request Forgery
+
+
+> Takes advantage of the fact that cookies(or Basic Authentication credentials) are passed along with requests)
+
+  < image src="" />
+
+
+## CSRF TOken
+## Validate Request Origin
+## Host and X-Forward-Host if behind a proxy
+## CORS(Cross-Origin Resource Sharing)
+
+> a preflight OPTIONS request gives server a chance to indicate what's allowed
+> Main request follows
 

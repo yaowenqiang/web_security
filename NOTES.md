@@ -61,3 +61,19 @@
 > a preflight OPTIONS request gives server a chance to indicate what's allowed
 > Main request follows
 
+# clickjacking
+
++ A "UI" redress attach"
++ Can be used to capture keystrokes as well
+
+## clickjacking Defenses: Modern Browsers
+
++ X-Frame-Options:
+  + X-Frame-Options: DENY
+  + X-Frame-Options: SAMEORIGIN
+  + X-Frame-Options: ALLOW-FROM: https://localhost/
+
++ Chrome/Safari don't respect alllowfrom ,Use frame-ancestors CSP directive instead
++ this applies to the TOP LEVEL frame
++ 
+

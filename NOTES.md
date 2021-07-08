@@ -115,4 +115,24 @@
     =signkey my-private-key \
     -out my-certificate.crt
 
+# HTTPS downgrade
+
+> Content-Security-Policy: upgrade-insecure-requests
++ Browser plugins attempt a "secure upgrade" whereever possible
++ https everywhere(browser plugin)
+
+> Server Name Indication
+
+Defending with Bad Certificate
+
+> Strict-transport-Security: max-age=31536000; includeSubdomains
+
+> Add your domain to HSTS Preload list: https://hstspreload.org/
+
+
+HTTP Response header informs browsers of what a public-key should look like
+> Public-Key-Pins: ping-sha256=""; max-age=31436000; includeSubDomains; report-uri="uri"
+
+For the specified amount of time, browsers will continue to assert that the certificate for your domain matches the pin-sha256 value
+The pin value is known as a Public Key Fingerprint
 

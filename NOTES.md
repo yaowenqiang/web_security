@@ -75,5 +75,44 @@
 
 + Chrome/Safari don't respect alllowfrom ,Use frame-ancestors CSP directive instead
 + this applies to the TOP LEVEL frame
-+ 
+
+# Thirdy party Assets
+
+> subresource integrity
+
+# Man-in-the-Middle
+
+> wifi PINEAPPLE
+> wifi antenna
+> ominous box for wifi pineapple
+> femtocell
+> snyk
+
+
+## OpenSSL
+
+### Generate a private key
+
+> openssl genrsa -aes128 \
+    -out my-private.key 2048
+
+### Generate a public key from private key
+
+> openssl rsa -pubout \
+    -in my-private-key \
+    -out my-public.key
+
+### Make a new Certificate Signing Request
+
+> openssl req -new \
+    -key my-private.key \
+    =out my-request.csr
+
+### Sign the certificate with your private key
+
+> openssl x509 -req -days 3\
+    -in my-request.csr \
+    =signkey my-private-key \
+    -out my-certificate.crt
+
 
